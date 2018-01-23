@@ -1,0 +1,29 @@
+
+
+<div class="content">
+  <!-- <div ng-controller="NinjaController"> No need for this anymore. Called in config method(app.js)-->
+    <!--Next 3 lines filter out which ninjas you want to look for in real time -->
+    <button ng-click="order = 'name'">Order by Name</button>
+    <button ng-click="order = 'belt'">Order by Belt</button>
+    <input type="text" ng-model="search" placeholder="Search for a ninja" />
+    <ul>
+      <li ng-repeat= "ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
+        <!--Time to create thumbnails for each name in the list  -->
+        <img ng-src="{(ninja.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px;"
+        ng-show="ninja.thumb"/>
+        <h3>{{ninja.name}} - {{ninja.rate | currency}}</h3>
+        <div class="remove" ng-click="removeNinja(ninja)">x</div>
+        <!-- this gives each belt a background color corresponding to the belt -->
+        <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt</span>
+      </li>
+    </ul>
+    <!-- This is where we can put new ninja info into the database  -->
+    <!-- Note: disapears on refresh for now -->
+    <form ng-submit="addNinja()">
+      <input type="text" placeholder="name" ng-model="newninja.name" />
+      <input type="text" placeholder="belt" ng-model="newninja.belt" />
+      <input type="text" placeholder="rate" ng-model="newninja.rate" />
+      <input type="submit" value="Add ninja to list" />
+    </form>
+  <!-- </div> -->
+</div>
