@@ -1,29 +1,29 @@
 [{
-		"name": "Yoshi",
+		"name": "Genji",
 		"belt": "green",
 		"rate": 50,
 		"available": true,
-		"thumb": "http://placehold.it/50x50/666666/ffffff"
+		"thumb": "content/img/genji.png"
 	},
 	{
 		"name": "Crystal",
 		"belt": "yellow",
 		"rate": 30,
 		"available": true,
-		"thumb": "http://placehold.it/50x50/666666/ffffff"
+		"thumb": "content/img/crystal.jpg"
 	},
 	{
 		"name": "Ryu",
 		"belt": "orange",
 		"rate": 10,
 		"available": true,
-		"thumb": "http://placehold.it/50x50/666666/ffffff"
+		"thumb": "content/img/ryu.png"
 	},
 	{
 		"name": "Shaun",
 		"belt": "black",
 		"rate": 1000,
 		"available": true,
-		"thumb": "http://placehold.it/50x50/666666/ffffff"
+		"thumb": "content/img/shaun.png"
 	}
 ]
